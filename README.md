@@ -23,19 +23,14 @@ Created security group for Bastion. Allowing all DevOps engineers to connect ove
 ![07](https://user-images.githubusercontent.com/91284177/158648237-228aac37-5098-4783-bccc-6dd35246b82d.png)
 Created security group and allow the entire world to talk to the ALB. port 80 and 443 were opened for the entire world to talk to the servers. IMAGE 08
 ![08](https://user-images.githubusercontent.com/91284177/158648271-ccdcac8b-4f55-4219-89fb-f4ee6abe8ff9.png)
+Created security group and allow the ALB to talk to the Nginx proxy server, also allow developers to access the bastion server via SSH. IMAGES 9, 10.
+![10](https://user-images.githubusercontent.com/91284177/158831380-5dbf1304-67fb-4891-81ea-ecf0ec9b10a4.png)
+Created an External facing Application Load Balancer (ALB), also created a Listener (port 80) and target group IMAGE 11
+![11](https://user-images.githubusercontent.com/91284177/158844344-5c01acee-62c8-48dc-b192-c97e934240bc.png)
+Created a Launch Template for nginx, Ec2 instance automatically follows this template to scale in and out (Use a redhat based AMI) and also Created an auto scaling group ASG with specifications to route traffic to any of the available heathy server. IMAGES 12 & 13
+![12](https://user-images.githubusercontent.com/91284177/158852007-719fe25a-c386-4ad9-8253-4d9b6bdc0e48.png)
+![13](https://user-images.githubusercontent.com/91284177/158852052-a041fd2e-259b-47f9-a9c6-95b11c2b4171.png)
 
- 
- 
- 
-
-
-
-
-15. Create security group and allow the ALB to talk to the Nginx proxy server.
-16. Create an External facing Application Load Balancer (ALB)
-17. Create a Listener (port 80) and target group
-18. Create a Launch Template for nginx (Use a redhat based AMI)
-19. Create ASG for nginx
 
 
 18. Create a Launch Template for Bastion 
